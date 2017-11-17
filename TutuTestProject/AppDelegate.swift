@@ -16,10 +16,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
-        print("Count of cities from: \(DataManager.loadData().citiesFrom.count)")
-        print("Count of cities to: \(DataManager.loadData().citiesTo.count)")
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.isTranslucent = false
+        
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.isTranslucent = false
+        navBarAppearance.tintColor = UIColor.white
+        navBarAppearance.barTintColor = UIColor.blue
+        let font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold)
+        navBarAppearance.titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: UIColor.white,
+            NSAttributedStringKey.font: font
+        ]
+        
+        let sheduleVC = SheduleViewController()
+        let scheduleNavController = UINavigationController(rootViewController: sheduleVC)
+        
+        let aboutVC = AboutViewController()
+        let aboutNavController = UINavigationController(rootViewController: aboutVC)
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [scheduleNavController, aboutNavController]
+        tabBarController.tabBar.items![0].title = "Расписание"
+        tabBarController.tabBar.items![1].title = "О приложении"
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = tabBarController
+        
         return true
     }
 
