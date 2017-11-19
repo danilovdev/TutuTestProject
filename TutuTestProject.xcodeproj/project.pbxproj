@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C6E061B1FBF3F5D00978C9C /* SheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061A1FBF3F5D00978C9C /* SheduleViewController.swift */; };
+		3C5475151FC18A7C00B93285 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5475131FC18A7C00B93285 /* StationCell.swift */; };
+		3C5475161FC18A7C00B93285 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C5475141FC18A7C00B93285 /* StationCell.xib */; };
+		3C6E061B1FBF3F5D00978C9C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061A1FBF3F5D00978C9C /* ScheduleViewController.swift */; };
 		3C6E061D1FBF3F7600978C9C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061C1FBF3F7600978C9C /* AboutViewController.swift */; };
 		3C6E061F1FBF48E900978C9C /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061E1FBF48E900978C9C /* StationsViewController.swift */; };
-		3C6E06271FBF4A1A00978C9C /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E06251FBF4A1A00978C9C /* ScheduleTableViewCell.swift */; };
-		3C6E06281FBF4A1A00978C9C /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6E06261FBF4A1A00978C9C /* ScheduleTableViewCell.xib */; };
 		3CC02E311FBDCA0900B2BAF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E301FBDCA0900B2BAF9 /* AppDelegate.swift */; };
 		3CC02E361FBDCA0900B2BAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC02E341FBDCA0900B2BAF9 /* Main.storyboard */; };
 		3CC02E391FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E371FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld */; };
@@ -24,6 +24,7 @@
 		3CC02E6B1FBDF6ED00B2BAF9 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E6A1FBDF6ED00B2BAF9 /* City.swift */; };
 		3CC02E6D1FBDF73300B2BAF9 /* PointCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E6C1FBDF73300B2BAF9 /* PointCoordinates.swift */; };
 		3CC02E701FBDF7CE00B2BAF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E6F1FBDF7CE00B2BAF9 /* DataManager.swift */; };
+		3CDA773A1FC0977C008E9743 /* StationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA77391FC0977C008E9743 /* StationDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C6E061A1FBF3F5D00978C9C /* SheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleViewController.swift; sourceTree = "<group>"; };
+		3C5475131FC18A7C00B93285 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		3C5475141FC18A7C00B93285 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		3C6E061A1FBF3F5D00978C9C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		3C6E061C1FBF3F7600978C9C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3C6E061E1FBF48E900978C9C /* StationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
-		3C6E06251FBF4A1A00978C9C /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
-		3C6E06261FBF4A1A00978C9C /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		3CC02E2D1FBDCA0900B2BAF9 /* TutuTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutuTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC02E301FBDCA0900B2BAF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CC02E351FBDCA0900B2BAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		3CC02E6A1FBDF6ED00B2BAF9 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		3CC02E6C1FBDF73300B2BAF9 /* PointCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCoordinates.swift; sourceTree = "<group>"; };
 		3CC02E6F1FBDF7CE00B2BAF9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3CDA77391FC0977C008E9743 /* StationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +99,10 @@
 		3C6E06191FBF3F3D00978C9C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3C6E061A1FBF3F5D00978C9C /* SheduleViewController.swift */,
+				3C6E061A1FBF3F5D00978C9C /* ScheduleViewController.swift */,
 				3C6E061C1FBF3F7600978C9C /* AboutViewController.swift */,
 				3C6E061E1FBF48E900978C9C /* StationsViewController.swift */,
+				3CDA77391FC0977C008E9743 /* StationDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,8 +126,8 @@
 		3C6E06221FBF49DF00978C9C /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				3C6E06251FBF4A1A00978C9C /* ScheduleTableViewCell.swift */,
-				3C6E06261FBF4A1A00978C9C /* ScheduleTableViewCell.xib */,
+				3C5475131FC18A7C00B93285 /* StationCell.swift */,
+				3C5475141FC18A7C00B93285 /* StationCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -312,9 +315,9 @@
 			files = (
 				3CC02E3E1FBDCA0900B2BAF9 /* LaunchScreen.storyboard in Resources */,
 				3CC02E3B1FBDCA0900B2BAF9 /* Assets.xcassets in Resources */,
+				3C5475161FC18A7C00B93285 /* StationCell.xib in Resources */,
 				3CC02E671FBDD6F700B2BAF9 /* allStations.json in Resources */,
 				3CC02E361FBDCA0900B2BAF9 /* Main.storyboard in Resources */,
-				3C6E06281FBF4A1A00978C9C /* ScheduleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +345,14 @@
 				3CC02E6D1FBDF73300B2BAF9 /* PointCoordinates.swift in Sources */,
 				3C6E061F1FBF48E900978C9C /* StationsViewController.swift in Sources */,
 				3CC02E701FBDF7CE00B2BAF9 /* DataManager.swift in Sources */,
+				3C5475151FC18A7C00B93285 /* StationCell.swift in Sources */,
 				3CC02E391FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld in Sources */,
+				3CDA773A1FC0977C008E9743 /* StationDetailsViewController.swift in Sources */,
 				3C6E061D1FBF3F7600978C9C /* AboutViewController.swift in Sources */,
 				3CC02E691FBDF6E300B2BAF9 /* Station.swift in Sources */,
-				3C6E06271FBF4A1A00978C9C /* ScheduleTableViewCell.swift in Sources */,
 				3CC02E6B1FBDF6ED00B2BAF9 /* City.swift in Sources */,
 				3CC02E311FBDCA0900B2BAF9 /* AppDelegate.swift in Sources */,
-				3C6E061B1FBF3F5D00978C9C /* SheduleViewController.swift in Sources */,
+				3C6E061B1FBF3F5D00978C9C /* ScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class City {
+struct City {
     
     var countryTitle: String?
     

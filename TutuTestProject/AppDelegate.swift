@@ -32,8 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSAttributedStringKey.font: font
         ]
         
-        let sheduleVC = SheduleViewController()
+        let sheduleVC = ScheduleViewController()
+        sheduleVC.data = DataManager.loadData()
         let scheduleNavController = UINavigationController(rootViewController: sheduleVC)
+        scheduleNavController.navigationBar.prefersLargeTitles = true
         
         let aboutVC = AboutViewController()
         let aboutNavController = UINavigationController(rootViewController: aboutVC)
