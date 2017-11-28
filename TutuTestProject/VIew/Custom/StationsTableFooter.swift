@@ -25,15 +25,15 @@ class StationsTableFooter: UIView {
     
     func configure() {
         self.backgroundColor = UIColor.blue
-//        self.alpha = 0.0
+        self.alpha = 0.0
         self.titleLabel.textColor = UIColor.white
         self.titleLabel.textAlignment = .center
-//        self.addSubview(self.titleLabel)
+        self.addSubview(self.titleLabel)
     }
     
-//    override func draw(_ rect: CGRect) {
-////        self.titleLabel.frame = self.bounds
-//    }
+    override func draw(_ rect: CGRect) {
+        self.titleLabel.frame = self.bounds
+    }
     
     
     private func hide() {
@@ -48,11 +48,20 @@ class StationsTableFooter: UIView {
         }
     }
     
-    func showResults() {
-        self.show()
+    func showResults(_ filteredCount: Int, _ totalCount: Int) {
+        if (filteredCount == totalCount) {
+            self.dismiss()
+        } else if (filteredCount == 0) {
+            titleLabel.text = "Ничего не найдено"
+            show()
+        } else {
+            titleLabel.text = "Найдено \(filteredCount) of \(totalCount)"
+            show()
+        }
     }
     
     func dismiss() {
-        
+        self.titleLabel.text = ""
+        self.hide()
     }
 }

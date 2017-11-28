@@ -80,11 +80,32 @@ class ScheduleViewController: UITableViewController {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         self.view.addGestureRecognizer(tapGestureRecognizer)
+        
+        
+    }
+    
+    @objc func clearButtonTapped() {
+        self.fromStation = nil
+        self.selectFromStationCell.textLabel?.text = "Выберите станцию отправления"
+        self.toStation = nil
+        self.selectToStationCell.textLabel?.text = "Выберите станцию прибытия"
+        self.scheduleDate = nil
+        self.dateTextInput.text = ""
     }
     
     func configureNavBar() {
         let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = backBarButtonItem
+        
+        let clearButton = CustomButton(type: .system)
+        clearButton.setTitle("Очистить", for: .normal)
+        clearButton.layer.borderColor = UIColor.white.cgColor
+        clearButton.layer.borderWidth = 1.0
+        clearButton.layer.cornerRadius = 6.0
+        clearButton.frame = CGRect(x: 0, y: 0, width: 80, height: 35)
+        clearButton.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
+        let clearBarButtonItem = UIBarButtonItem(customView: clearButton)
+        self.navigationItem.rightBarButtonItem = clearBarButtonItem
     }
     
     func configureTableView() {
@@ -160,6 +181,7 @@ class ScheduleViewController: UITableViewController {
     }
     
     func pushResultsVC() {
+        self.validateInput()
         self.hidesBottomBarWhenPushed = true
         let resultsVC = ResultsViewController()
         resultsVC.fromStation = self.fromStation
@@ -202,6 +224,21 @@ class ScheduleViewController: UITableViewController {
             self.view.endEditing(true)
         }
         sender.cancelsTouchesInView = false
+    }
+    
+    func validateInput() {
+        guard self.fromStation != nil else {
+            self.showAlert(title: "Ошибка", message: "Не выбрана станция отправления")
+            return
+        }
+        guard self.toStation != nil else {
+            self.showAlert(title: "Ошибка", message: "Не выбрана станция прибытия")
+            return
+        }
+        guard self.scheduleDate != nil else {
+            self.showAlert(title: "Ошибка", message: "Не выбрана дата")
+            return
+        }
     }
     
 }

@@ -1,0 +1,6 @@
+framework module Pods_TutuTestProjectTests {
+  umbrella header "Pods-TutuTestProjectTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

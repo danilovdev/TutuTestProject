@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AlamofireImage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,7 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [scheduleNavController, aboutNavController]
         tabBarController.tabBar.items![0].title = "Расписание"
+        tabBarController.tabBar.items![0].image = UIImage(named: "ic_schedule_48pt")?.af_imageAspectScaled(toFit: CGSize(width: 30, height: 30))
         tabBarController.tabBar.items![1].title = "О приложении"
+        tabBarController.tabBar.items![1].image = UIImage(named: "ic_info_outline_48pt")?.af_imageAspectScaled(toFit: CGSize(width: 30, height: 30))
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
