@@ -15,6 +15,8 @@ protocol StationSelectionDelegate {
 
 class StationsViewController: UITableViewController {
     
+    var tableFooter: StationsTableFooter!
+    
     var stationSelectionDelegate: StationSelectionDelegate!
     
     var selectedStation: Station!
@@ -39,6 +41,32 @@ class StationsViewController: UITableViewController {
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
+        let footerView = UIView()
+        footerView.backgroundColor = .orange
+        footerView.frame = CGRect(x: 0, y: 0, width: 200, height: 64)
+        self.tableView.addSubview(footerView)
+        footerView.translatesAutoresizingMaskIntoConstraints = false
+                footerView.leadingAnchor.constraint(equalTo: self.tableView.leadingAnchor).isActive = true
+                footerView.trailingAnchor.constraint(equalTo: self.tableView.trailingAnchor).isActive = true
+                footerView.bottomAnchor.constraint(equalTo: self.tableView.bottomAnchor).isActive = true
+                footerView.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        self.tableView.bringSubview(toFront: footerView)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        self.tableFooter = StationsTableFooter(frame: CGRect(x: 0, y: 0, width: 200, height: 64))
+//        self.tableFooter.translatesAutoresizingMaskIntoConstraints = false
+//        self.ta
+//        self.tableView.tableFooterView = self.tableFooter
+//        self.tableView.tableFooterView?.translatesAutoresizingMaskIntoConstraints = false
+//        self.tableFooter.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+//        self.tableFooter.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+//        self.tableFooter.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+//        self.tableFooter.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        
+//        self.tableFooter.showResults()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

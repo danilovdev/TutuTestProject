@@ -30,6 +30,12 @@ class ScheduleViewController: UITableViewController {
     
     let datePicker = UIDatePicker()
     
+    var fromStation: Station!
+    
+    var toStation: Station!
+    
+    var scheduleDate: Date!
+    
     override func loadView() {
         super.loadView()
         
@@ -132,7 +138,7 @@ class ScheduleViewController: UITableViewController {
         case 2:
             print("Success")
         case 3:
-            print("Success")
+            self.pushResultsVC()
         default: fatalError("Unknown section")
         }
     }
@@ -150,6 +156,16 @@ class ScheduleViewController: UITableViewController {
         stationsVC.stationsMode = mode
         stationsVC.stationSelectionDelegate = self
         self.navigationController?.pushViewController(stationsVC, animated: true)
+        self.hidesBottomBarWhenPushed = false
+    }
+    
+    func pushResultsVC() {
+        self.hidesBottomBarWhenPushed = true
+        let resultsVC = ResultsViewController()
+        resultsVC.fromStation = self.fromStation
+        resultsVC.toStation = self.toStation
+        resultsVC.scheduleDate = self.scheduleDate
+        self.navigationController?.pushViewController(resultsVC, animated: true)
         self.hidesBottomBarWhenPushed = false
     }
     
@@ -177,6 +193,7 @@ class ScheduleViewController: UITableViewController {
         self.view.endEditing(true)
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
+        self.scheduleDate = self.datePicker.date
         self.dateTextInput.text = dateFormatter.string(from: self.datePicker.date)
     }
     
@@ -193,8 +210,10 @@ extension ScheduleViewController: StationSelectionDelegate {
     
     func didSelectStation(station: Station, mode: StationsMode) {
         if mode == .from {
+            self.fromStation = station
             self.selectFromStationCell.textLabel?.text = station.stationTitle
         } else if mode == .to {
+            self.toStation = station
             self.selectToStationCell.textLabel?.text = station.stationTitle
         }
     }

@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         UIApplication.shared.statusBarStyle = .lightContent
@@ -31,6 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSAttributedStringKey.foregroundColor: UIColor.white,
             NSAttributedStringKey.font: font
         ]
+        navBarAppearance.largeTitleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: UIColor.white
+        ]
+        
         
         let sheduleVC = ScheduleViewController()
         sheduleVC.data = DataManager.loadData()
