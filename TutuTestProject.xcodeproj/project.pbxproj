@@ -11,11 +11,13 @@
 		16803841F129266C5CC88AD6 /* Pods_TutuTestProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0754DF8E83A42796608AF166 /* Pods_TutuTestProjectTests.framework */; };
 		3C37F3011FCC627800D650EA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C37F3001FCC627800D650EA /* ResultsViewController.swift */; };
 		3C37F3041FCC699D00D650EA /* StationsTableFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C37F3031FCC699D00D650EA /* StationsTableFooter.swift */; };
-		3C5475151FC18A7C00B93285 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5475131FC18A7C00B93285 /* StationCell.swift */; };
-		3C5475161FC18A7C00B93285 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C5475141FC18A7C00B93285 /* StationCell.xib */; };
 		3C6E061B1FBF3F5D00978C9C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061A1FBF3F5D00978C9C /* ScheduleViewController.swift */; };
 		3C6E061D1FBF3F7600978C9C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061C1FBF3F7600978C9C /* AboutViewController.swift */; };
 		3C6E061F1FBF48E900978C9C /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061E1FBF48E900978C9C /* StationsViewController.swift */; };
+		3CB380AA1FD12AAD004C6E2C /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB380A81FD12AAD004C6E2C /* StationCell.swift */; };
+		3CB380AB1FD12AAD004C6E2C /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB380A91FD12AAD004C6E2C /* StationCell.xib */; };
+		3CB380AE1FD13336004C6E2C /* StationDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB380AC1FD13336004C6E2C /* StationDetailsCell.swift */; };
+		3CB380AF1FD13336004C6E2C /* StationDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB380AD1FD13336004C6E2C /* StationDetailsCell.xib */; };
 		3CC02E311FBDCA0900B2BAF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E301FBDCA0900B2BAF9 /* AppDelegate.swift */; };
 		3CC02E361FBDCA0900B2BAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC02E341FBDCA0900B2BAF9 /* Main.storyboard */; };
 		3CC02E391FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E371FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld */; };
@@ -31,6 +33,7 @@
 		3CDA773A1FC0977C008E9743 /* StationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA77391FC0977C008E9743 /* StationDetailsViewController.swift */; };
 		3CFE0B8D1FCDB6DA009E52FB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE0B8C1FCDB6DA009E52FB /* UIViewControllerExtensions.swift */; };
 		3CFE0B901FCDCD13009E52FB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE0B8F1FCDCD13009E52FB /* CustomButton.swift */; };
+		3CFE0B921FCE63BB009E52FB /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE0B911FCE63BB009E52FB /* UIFontExtensions.swift */; };
 		AB46AC8CFBDDB9EFD651DBED /* Pods_TutuTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE0D9C55C6CE1F1FF97D46A /* Pods_TutuTestProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,11 +60,13 @@
 		0FBCDE8C1D7800B6FBE50AE2 /* Pods-TutuTestProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutuTestProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutuTestProjectTests/Pods-TutuTestProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C37F3001FCC627800D650EA /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		3C37F3031FCC699D00D650EA /* StationsTableFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableFooter.swift; sourceTree = "<group>"; };
-		3C5475131FC18A7C00B93285 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
-		3C5475141FC18A7C00B93285 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
 		3C6E061A1FBF3F5D00978C9C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		3C6E061C1FBF3F7600978C9C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3C6E061E1FBF48E900978C9C /* StationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
+		3CB380A81FD12AAD004C6E2C /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		3CB380A91FD12AAD004C6E2C /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		3CB380AC1FD13336004C6E2C /* StationDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsCell.swift; sourceTree = "<group>"; };
+		3CB380AD1FD13336004C6E2C /* StationDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationDetailsCell.xib; sourceTree = "<group>"; };
 		3CC02E2D1FBDCA0900B2BAF9 /* TutuTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutuTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC02E301FBDCA0900B2BAF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CC02E351FBDCA0900B2BAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		3CDA77391FC0977C008E9743 /* StationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsViewController.swift; sourceTree = "<group>"; };
 		3CFE0B8C1FCDB6DA009E52FB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3CFE0B8F1FCDCD13009E52FB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		3CFE0B911FCE63BB009E52FB /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		59DBD1F5B774F11B0BB40780 /* Pods-TutuTestProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutuTestProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutuTestProjectUITests/Pods-TutuTestProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84D1E7C6E40526D4D039FB16 /* Pods_TutuTestProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutuTestProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCD15586B20B792FBFB7213 /* Pods-TutuTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutuTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutuTestProject/Pods-TutuTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,8 +179,10 @@
 		3C6E06221FBF49DF00978C9C /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				3C5475131FC18A7C00B93285 /* StationCell.swift */,
-				3C5475141FC18A7C00B93285 /* StationCell.xib */,
+				3CB380A81FD12AAD004C6E2C /* StationCell.swift */,
+				3CB380A91FD12AAD004C6E2C /* StationCell.xib */,
+				3CB380AC1FD13336004C6E2C /* StationDetailsCell.swift */,
+				3CB380AD1FD13336004C6E2C /* StationDetailsCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -260,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				3CFE0B8C1FCDB6DA009E52FB /* UIViewControllerExtensions.swift */,
+				3CFE0B911FCE63BB009E52FB /* UIFontExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,11 +407,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB380AB1FD12AAD004C6E2C /* StationCell.xib in Resources */,
 				3CC02E3E1FBDCA0900B2BAF9 /* LaunchScreen.storyboard in Resources */,
 				3CC02E3B1FBDCA0900B2BAF9 /* Assets.xcassets in Resources */,
-				3C5475161FC18A7C00B93285 /* StationCell.xib in Resources */,
 				3CC02E671FBDD6F700B2BAF9 /* allStations.json in Resources */,
 				3CC02E361FBDCA0900B2BAF9 /* Main.storyboard in Resources */,
+				3CB380AF1FD13336004C6E2C /* StationDetailsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,12 +589,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB380AE1FD13336004C6E2C /* StationDetailsCell.swift in Sources */,
 				3CC02E6D1FBDF73300B2BAF9 /* PointCoordinates.swift in Sources */,
 				3C6E061F1FBF48E900978C9C /* StationsViewController.swift in Sources */,
 				3CC02E701FBDF7CE00B2BAF9 /* DataManager.swift in Sources */,
-				3C5475151FC18A7C00B93285 /* StationCell.swift in Sources */,
 				3C37F3041FCC699D00D650EA /* StationsTableFooter.swift in Sources */,
 				3CC02E391FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld in Sources */,
+				3CFE0B921FCE63BB009E52FB /* UIFontExtensions.swift in Sources */,
 				3CFE0B8D1FCDB6DA009E52FB /* UIViewControllerExtensions.swift in Sources */,
 				3CDA773A1FC0977C008E9743 /* StationDetailsViewController.swift in Sources */,
 				3C6E061D1FBF3F7600978C9C /* AboutViewController.swift in Sources */,
@@ -593,6 +604,7 @@
 				3CC02E311FBDCA0900B2BAF9 /* AppDelegate.swift in Sources */,
 				3C6E061B1FBF3F5D00978C9C /* ScheduleViewController.swift in Sources */,
 				3C37F3011FCC627800D650EA /* ResultsViewController.swift in Sources */,
+				3CB380AA1FD12AAD004C6E2C /* StationCell.swift in Sources */,
 				3CFE0B901FCDCD13009E52FB /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

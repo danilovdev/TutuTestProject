@@ -1,25 +1,38 @@
 //
-//  StationTableViewCell.swift
+//  StationCell.swift
 //  TutuTestProject
 //
-//  Created by Alexey Danilov on 19/11/2017.
+//  Created by Alexey Danilov on 01.12.17.
 //  Copyright © 2017 DanilovDev. All rights reserved.
 //
 
 import UIKit
 
 class StationCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        self.accessoryType = .disclosureIndicator
+    
+    private var station: Station!
+    
+    var showDetailsHandler: ((_ station: Station) -> Void)?
+    
+    @IBOutlet var titleLabel: UILabel!
+    
+    @IBOutlet var showDetailsButton: CustomButton! {
+        didSet {
+            showDetailsButton.layer.cornerRadius = 6.0
+            showDetailsButton.layer.borderWidth = 1.0
+            showDetailsButton.layer.borderColor = UIColor.blue.cgColor
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func showDetailsButtonTapped(sender: UIButton) {
+        if let showDetailsHandler = self.showDetailsHandler {
+            showDetailsHandler(self.station)
+        }
+    }
+    
+    func configure(_ station: Station) {
+        self.station = station
+        self.titleLabel.text = station.stationTitle
     }
     
 }

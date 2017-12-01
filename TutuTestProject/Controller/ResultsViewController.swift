@@ -22,6 +22,13 @@ class ResultsViewController: UIViewController {
         self.view.backgroundColor = .white
         let shareBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareButtonTapped))
         self.navigationItem.rightBarButtonItem = shareBarButtonItem
+        
+        let titleLabel = UILabel()
+        titleLabel.text = "TuTu.ru"
+        titleLabel.font = titleLabel.font.withSize(26)
+        titleLabel.font = titleLabel.font.boldItalic
+        titleLabel.textColor = .white
+        self.navigationItem.titleView = titleLabel
     }
     
     @objc func shareButtonTapped() {

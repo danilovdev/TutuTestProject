@@ -11,14 +11,60 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationTableViewCell" id="KGk-i7-Jjw" customClass="StationCell" customModule="TutuTestProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationCell" rowHeight="234" id="KGk-i7-Jjw" customClass="StationCell" customModule="TutuTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="234"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="438" height="233.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zjh-7l-PJX">
+                        <rect key="frame" x="0.0" y="10" width="0.0" height="213.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y9-wZ-zDG">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-u7-ksa">
+                                <rect key="frame" x="0.0" y="30.5" width="0.0" height="183"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ack-Oh-53o" customClass="CustomButton" customModule="TutuTestProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="180" height="163"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="6X1-c5-t8f"/>
+                                        </constraints>
+                                        <inset key="titleEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <state key="normal" title="Открыть описание"/>
+                                        <connections>
+                                            <action selector="showDetailsButtonTappedWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0vX-LH-dSm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ack-Oh-53o" secondAttribute="bottom" constant="10" id="KdE-9F-HiQ"/>
+                                    <constraint firstItem="ack-Oh-53o" firstAttribute="top" secondItem="ofh-u7-ksa" secondAttribute="top" constant="10" id="a9f-pX-Y6f"/>
+                                    <constraint firstItem="ack-Oh-53o" firstAttribute="leading" secondItem="ofh-u7-ksa" secondAttribute="leading" constant="10" id="zCH-Aa-V1k"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zjh-7l-PJX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3as-N2-Cc2"/>
+                    <constraint firstAttribute="bottom" secondItem="zjh-7l-PJX" secondAttribute="bottom" constant="10" id="Wfm-7b-zgo"/>
+                    <constraint firstItem="zjh-7l-PJX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ttz-cT-CsC"/>
+                    <constraint firstAttribute="trailing" secondItem="zjh-7l-PJX" secondAttribute="trailing" constant="10" id="zrr-s1-pLk"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="showDetailsButton" destination="ack-Oh-53o" id="iq2-F7-ov6"/>
+                <outlet property="titleLabel" destination="9y9-wZ-zDG" id="Up8-Ra-Ail"/>
+            </connections>
+            <point key="canvasLocation" x="94" y="149"/>
         </tableViewCell>
     </objects>
 </document>

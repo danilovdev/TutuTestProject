@@ -39,9 +39,12 @@ class ScheduleViewController: UITableViewController {
     override func loadView() {
         super.loadView()
         
-        let titleView = UIView()
-        titleView.backgroundColor = UIColor.red
-        self.navigationItem.titleView = titleView
+        let titleLabel = UILabel()
+        titleLabel.text = "TuTu.ru"
+        titleLabel.font = titleLabel.font.withSize(26)
+        titleLabel.font = titleLabel.font.boldItalic
+        titleLabel.textColor = .white
+        self.navigationItem.titleView = titleLabel
         
         
         self.selectFromStationCell.accessoryType = .disclosureIndicator
@@ -99,10 +102,11 @@ class ScheduleViewController: UITableViewController {
         
         let clearButton = CustomButton(type: .system)
         clearButton.setTitle("Очистить", for: .normal)
+        clearButton.titleLabel?.font = clearButton.titleLabel?.font.withSize(14)
         clearButton.layer.borderColor = UIColor.white.cgColor
         clearButton.layer.borderWidth = 1.0
         clearButton.layer.cornerRadius = 6.0
-        clearButton.frame = CGRect(x: 0, y: 0, width: 80, height: 35)
+        clearButton.frame = CGRect(x: 0, y: 0, width: 70, height: 30)
         clearButton.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
         let clearBarButtonItem = UIBarButtonItem(customView: clearButton)
         self.navigationItem.rightBarButtonItem = clearBarButtonItem
@@ -205,10 +209,15 @@ class ScheduleViewController: UITableViewController {
         toolbar.isTranslucent = false
         toolbar.sizeToFit()
         toolbar.isUserInteractionEnabled = true
+        let cancelButton = UIBarButtonItem(title: "Отмена", style: .plain, target: self, action: #selector(datePickerCancelTapped))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let doneButton = UIBarButtonItem(title: "Готово", style: .plain, target: self, action: #selector(datePickerDoneTapped))
-        toolbar.setItems([spaceButton, doneButton], animated: false)
+        toolbar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         return toolbar
+    }
+    
+    @objc func datePickerCancelTapped() {
+        self.view.endEditing(true)
     }
     
     @objc func datePickerDoneTapped() {

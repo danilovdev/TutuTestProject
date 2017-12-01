@@ -53,8 +53,13 @@ class StationsViewController: UIViewController {
 
     func configureNavBar() {
         self.navigationItem.title = "Станции"
-        let doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(stationSelectionDone))
-        self.navigationItem.setRightBarButton(doneBarButtonItem, animated: false)
+        
+        let titleLabel = UILabel()
+        titleLabel.text = "TuTu.ru"
+        titleLabel.font = titleLabel.font.withSize(26)
+        titleLabel.font = titleLabel.font.boldItalic
+        titleLabel.textColor = .white
+        self.navigationItem.titleView = titleLabel
     }
 
     func configureTableView() {
@@ -68,18 +73,17 @@ class StationsViewController: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-    }
-
-    
-    @objc func stationSelectionDone() {
-        self.stationSelectionDelegate.didSelectStation(station: self.selectedStation, mode: self.stationsMode)
-        self.navigationController?.popViewController(animated: true)
+        self.tableView.register(UINib.init(nibName: "StationCell", bundle: nil), forCellReuseIdentifier: "StationCell")
+        self.tableView.estimatedRowHeight = 30
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
-    func showStationDetails() {
+    func showStationDetails(_ station: Station) {
+        self.hidesBottomBarWhenPushed = true
         let stationDetailsVC = StationDetailsViewController()
-        stationDetailsVC.station = self.selectedStation
+        stationDetailsVC.station = station
+        stationDetailsVC.stationsMode = self.stationsMode
+        stationDetailsVC.stationSelectionDelegate = self.stationSelectionDelegate
         self.navigationController?.pushViewController(stationDetailsVC, animated: true)
     }
     
@@ -130,7 +134,11 @@ extension StationsViewController: UITableViewDelegate {
         } else {
             self.selectedStation = self.cities[indexPath.section].stations?[indexPath.row]
         }
+        self.stationSelectionDelegate.didSelectStation(station: self.selectedStation!, mode: self.stationsMode)
+        self.navigationController?.popViewController(animated: true)
     }
+    
+
 }
 
 extension StationsViewController: UITableViewDataSource {
@@ -172,16 +180,19 @@ extension StationsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StationCell", for: indexPath) as! StationCell
         
-        let stationTitle: String?
+        let station: Station!
         if self.isFiltering() {
-            stationTitle = self.filteredCities[indexPath.section].stations?[indexPath.row].stationTitle
+            station = self.filteredCities[indexPath.section].stations?[indexPath.row]
         } else {
-            stationTitle = self.cities[indexPath.section].stations?[indexPath.row].stationTitle
+            station = self.cities[indexPath.section].stations?[indexPath.row]
         }
         
-        cell.textLabel?.text = stationTitle
+        cell.configure(station)
+        cell.showDetailsHandler = { station in
+            self.showStationDetails(station)
+        }
         
         return cell
     }

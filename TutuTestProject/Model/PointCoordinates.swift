@@ -20,4 +20,16 @@ struct PointCoordinates {
             self.latitude = latitude
         }
     }
+    
+    func description() -> String {
+        var longitudeStr = "Неизвестно"
+        var latitudeStr = "Неизвестно"
+        if let longitude = self.longitude {
+           longitudeStr = String(format: "%.4f", Double(longitude))
+        }
+        if let latitude = self.latitude {
+            latitudeStr = String(format: "%.4f", Double(latitude))
+        }
+        return "Долгота: \(longitudeStr), Широта: \(latitudeStr)"
+    }
 }
