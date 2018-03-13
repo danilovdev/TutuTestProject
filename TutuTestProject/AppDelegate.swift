@@ -14,14 +14,50 @@ import AlamofireImage
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let coreDataManager = CoreDataManager(modelName: "TutuTestProject")
+    
+    lazy var aboutNavController: UINavigationController = {
+        let aboutVC = AboutViewController()
+        let aboutNavController = UINavigationController(rootViewController: aboutVC)
+        return aboutNavController
+    }()
+    
+    lazy var scheduleNavController: UINavigationController = {
+        let sheduleVC = ScheduleViewController()
+//        sheduleVC.data = DataManager.loadData()
+        let scheduleNavController = UINavigationController(rootViewController: sheduleVC)
+        scheduleNavController.navigationBar.prefersLargeTitles = true
+        return scheduleNavController
+    }()
+    
+    lazy var tabBarController: UITabBarController = {
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [scheduleNavController, aboutNavController]
+        tabBarController.tabBar.items![0].title = Constants.TabBarConfig.Schedule.name
+        tabBarController.tabBar.items![0].image = UIImage(named: Constants.TabBarConfig.Schedule.image)?.af_imageAspectScaled(toFit: CGSize(width: 30, height: 30))
+        tabBarController.tabBar.items![1].title = Constants.TabBarConfig.About.name
+        tabBarController.tabBar.items![1].image = UIImage(named: Constants.TabBarConfig.About.image)?.af_imageAspectScaled(toFit: CGSize(width: 30, height: 30))
+        return tabBarController
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        configureStatusBar()
+        configureTabBarAppearance()
+        configureNavBarAppearance()
+        configureRootController()
+        
+        importJSONSeedDataIfNeeded()
+        
+        return true
+    }
+    
+    private func configureStatusBar() {
         UIApplication.shared.statusBarStyle = .lightContent
-        
-        let tabBarAppearance = UITabBar.appearance()
-        tabBarAppearance.isTranslucent = false
-        
+    }
+    
+    private func configureNavBarAppearance() {
         let navBarAppearance = UINavigationBar.appearance()
         navBarAppearance.isTranslucent = false
         navBarAppearance.tintColor = UIColor.white
@@ -34,98 +70,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navBarAppearance.largeTitleTextAttributes = [
             NSAttributedStringKey.foregroundColor: UIColor.white
         ]
-        
-        
-        let sheduleVC = ScheduleViewController()
-        sheduleVC.data = DataManager.loadData()
-        let scheduleNavController = UINavigationController(rootViewController: sheduleVC)
-        scheduleNavController.navigationBar.prefersLargeTitles = true
-        
-        let aboutVC = AboutViewController()
-        let aboutNavController = UINavigationController(rootViewController: aboutVC)
-        
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [scheduleNavController, aboutNavController]
-        tabBarController.tabBar.items![0].title = "Расписание"
-        tabBarController.tabBar.items![0].image = UIImage(named: "ic_schedule_48pt")?.af_imageAspectScaled(toFit: CGSize(width: 30, height: 30))
-        tabBarController.tabBar.items![1].title = "О приложении"
-        tabBarController.tabBar.items![1].image = UIImage(named: "ic_info_outline_48pt")?.af_imageAspectScaled(toFit: CGSize(width: 30, height: 30))
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = tabBarController
-        
-        return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    
+    private func configureTabBarAppearance() {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.isTranslucent = false
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    private func configureRootController() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.rootViewController = tabBarController
     }
+    
+    private func importJSONSeedDataIfNeeded() {
+        let fetchRequest = NSFetchRequest<City>(entityName: "City")
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
+        do {
+            let count = try coreDataManager.manageObjectContext.count(for: fetchRequest)
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
-    }
-
-    // MARK: - Core Data stack
-
-    lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
-        let container = NSPersistentContainer(name: "TutuTestProject")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+            guard count == 0 else {
+                return
             }
-        })
-        return container
-    }()
+        } catch let error as NSError {
+            print("Error fetching: \(error), \(error.userInfo)")
+        }
 
-    // MARK: - Core Data Saving support
-
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        do {
+           let results = try coreDataManager.manageObjectContext.fetch(fetchRequest)
+            results.forEach {
+                coreDataManager.manageObjectContext.delete($0)
             }
+            coreDataManager.saveContext()
+            importJSONSeedData()
+        } catch let error as NSError {
+            print("Error fetching: \(error), \(error.userInfo)")
         }
     }
-
+    
+    private func importJSONSeedData() {
+        guard let jsonUrl = Bundle.main.url(forResource: "allStations", withExtension: "json") else {
+            return
+        }
+        
+        do {
+            let jsonData = try Data(contentsOf: jsonUrl)
+            let decoder = JSONDecoder()
+            
+            guard let contextUserInfoKey = CodingUserInfoKey.context else {
+                fatalError()
+            }
+            
+            decoder.userInfo[contextUserInfoKey] = coreDataManager.manageObjectContext
+            let dataSource = try decoder.decode(DataSource.self, from: jsonData)
+            
+            coreDataManager.saveContext()
+            
+        } catch let error as NSError {
+            print("Error importing data: \(error), \(error.userInfo)")
+        }
+    }
 }
-

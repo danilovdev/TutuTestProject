@@ -14,23 +14,29 @@
 		3C6E061B1FBF3F5D00978C9C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061A1FBF3F5D00978C9C /* ScheduleViewController.swift */; };
 		3C6E061D1FBF3F7600978C9C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061C1FBF3F7600978C9C /* AboutViewController.swift */; };
 		3C6E061F1FBF48E900978C9C /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E061E1FBF48E900978C9C /* StationsViewController.swift */; };
+		3C85119320553CB50080A55A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C85119220553CB50080A55A /* Constants.swift */; };
+		3C85119520553EE90080A55A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C85119420553EE90080A55A /* CoreDataManager.swift */; };
 		3CB380AA1FD12AAD004C6E2C /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB380A81FD12AAD004C6E2C /* StationCell.swift */; };
 		3CB380AB1FD12AAD004C6E2C /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB380A91FD12AAD004C6E2C /* StationCell.xib */; };
 		3CB380AE1FD13336004C6E2C /* StationDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB380AC1FD13336004C6E2C /* StationDetailsCell.swift */; };
 		3CB380AF1FD13336004C6E2C /* StationDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB380AD1FD13336004C6E2C /* StationDetailsCell.xib */; };
 		3CC02E311FBDCA0900B2BAF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E301FBDCA0900B2BAF9 /* AppDelegate.swift */; };
-		3CC02E361FBDCA0900B2BAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC02E341FBDCA0900B2BAF9 /* Main.storyboard */; };
-		3CC02E391FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E371FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld */; };
 		3CC02E3B1FBDCA0900B2BAF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC02E3A1FBDCA0900B2BAF9 /* Assets.xcassets */; };
 		3CC02E3E1FBDCA0900B2BAF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC02E3C1FBDCA0900B2BAF9 /* LaunchScreen.storyboard */; };
 		3CC02E491FBDCA0900B2BAF9 /* TutuTestProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E481FBDCA0900B2BAF9 /* TutuTestProjectTests.swift */; };
 		3CC02E541FBDCA0900B2BAF9 /* TutuTestProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E531FBDCA0900B2BAF9 /* TutuTestProjectUITests.swift */; };
 		3CC02E671FBDD6F700B2BAF9 /* allStations.json in Resources */ = {isa = PBXBuildFile; fileRef = 3CC02E661FBDD6F700B2BAF9 /* allStations.json */; };
-		3CC02E691FBDF6E300B2BAF9 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E681FBDF6E300B2BAF9 /* Station.swift */; };
-		3CC02E6B1FBDF6ED00B2BAF9 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E6A1FBDF6ED00B2BAF9 /* City.swift */; };
-		3CC02E6D1FBDF73300B2BAF9 /* PointCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E6C1FBDF73300B2BAF9 /* PointCoordinates.swift */; };
 		3CC02E701FBDF7CE00B2BAF9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC02E6F1FBDF7CE00B2BAF9 /* DataManager.swift */; };
 		3CDA773A1FC0977C008E9743 /* StationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA77391FC0977C008E9743 /* StationDetailsViewController.swift */; };
+		3CF1111F2057DD75003A6CCA /* TutuTestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1111D2057DD75003A6CCA /* TutuTestProject.xcdatamodeld */; };
+		3CF1112C2057DF28003A6CCA /* DataSource+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF111282057DF28003A6CCA /* DataSource+CoreDataProperties.swift */; };
+		3CF1112D2057DF28003A6CCA /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF111292057DF28003A6CCA /* City+CoreDataProperties.swift */; };
+		3CF1112E2057DF28003A6CCA /* DataSource+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1112A2057DF28003A6CCA /* DataSource+CoreDataClass.swift */; };
+		3CF1112F2057DF28003A6CCA /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1112B2057DF28003A6CCA /* City+CoreDataClass.swift */; };
+		3CF111362057E83D003A6CCA /* PointCoordinates+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF111342057E83C003A6CCA /* PointCoordinates+CoreDataProperties.swift */; };
+		3CF111372057E83D003A6CCA /* PointCoordinates+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF111352057E83C003A6CCA /* PointCoordinates+CoreDataClass.swift */; };
+		3CF1113A2057F997003A6CCA /* Station+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF111382057F996003A6CCA /* Station+CoreDataProperties.swift */; };
+		3CF1113B2057F997003A6CCA /* Station+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF111392057F996003A6CCA /* Station+CoreDataClass.swift */; };
 		3CFE0B8D1FCDB6DA009E52FB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE0B8C1FCDB6DA009E52FB /* UIViewControllerExtensions.swift */; };
 		3CFE0B901FCDCD13009E52FB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE0B8F1FCDCD13009E52FB /* CustomButton.swift */; };
 		3CFE0B921FCE63BB009E52FB /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE0B911FCE63BB009E52FB /* UIFontExtensions.swift */; };
@@ -63,14 +69,14 @@
 		3C6E061A1FBF3F5D00978C9C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		3C6E061C1FBF3F7600978C9C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3C6E061E1FBF48E900978C9C /* StationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
+		3C85119220553CB50080A55A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3C85119420553EE90080A55A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3CB380A81FD12AAD004C6E2C /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		3CB380A91FD12AAD004C6E2C /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
 		3CB380AC1FD13336004C6E2C /* StationDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsCell.swift; sourceTree = "<group>"; };
 		3CB380AD1FD13336004C6E2C /* StationDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationDetailsCell.xib; sourceTree = "<group>"; };
 		3CC02E2D1FBDCA0900B2BAF9 /* TutuTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutuTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC02E301FBDCA0900B2BAF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CC02E351FBDCA0900B2BAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3CC02E381FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TutuTestProject.xcdatamodel; sourceTree = "<group>"; };
 		3CC02E3A1FBDCA0900B2BAF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CC02E3D1FBDCA0900B2BAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CC02E3F1FBDCA0900B2BAF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,11 +87,17 @@
 		3CC02E531FBDCA0900B2BAF9 /* TutuTestProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutuTestProjectUITests.swift; sourceTree = "<group>"; };
 		3CC02E551FBDCA0900B2BAF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CC02E661FBDD6F700B2BAF9 /* allStations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allStations.json; sourceTree = "<group>"; };
-		3CC02E681FBDF6E300B2BAF9 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		3CC02E6A1FBDF6ED00B2BAF9 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		3CC02E6C1FBDF73300B2BAF9 /* PointCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCoordinates.swift; sourceTree = "<group>"; };
 		3CC02E6F1FBDF7CE00B2BAF9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3CDA77391FC0977C008E9743 /* StationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsViewController.swift; sourceTree = "<group>"; };
+		3CF1111E2057DD75003A6CCA /* TutuTestProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TutuTestProject.xcdatamodel; sourceTree = "<group>"; };
+		3CF111282057DF28003A6CCA /* DataSource+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataSource+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3CF111292057DF28003A6CCA /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3CF1112A2057DF28003A6CCA /* DataSource+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataSource+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3CF1112B2057DF28003A6CCA /* City+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3CF111342057E83C003A6CCA /* PointCoordinates+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PointCoordinates+CoreDataProperties.swift"; path = "/Users/alexeydanilov/Documents/work/danilovdev/TutuTestProject/TutuTestProject/Model/PointCoordinates+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		3CF111352057E83C003A6CCA /* PointCoordinates+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PointCoordinates+CoreDataClass.swift"; path = "/Users/alexeydanilov/Documents/work/danilovdev/TutuTestProject/TutuTestProject/Model/PointCoordinates+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		3CF111382057F996003A6CCA /* Station+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Station+CoreDataProperties.swift"; path = "/Users/alexeydanilov/Documents/work/danilovdev/TutuTestProject/TutuTestProject/Model/Station+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		3CF111392057F996003A6CCA /* Station+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Station+CoreDataClass.swift"; path = "/Users/alexeydanilov/Documents/work/danilovdev/TutuTestProject/TutuTestProject/Model/Station+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		3CFE0B8C1FCDB6DA009E52FB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3CFE0B8F1FCDCD13009E52FB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		3CFE0B911FCE63BB009E52FB /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
@@ -187,6 +199,14 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		3C85119120553CA30080A55A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3C85119220553CB50080A55A /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		3CC02E241FBDCA0900B2BAF9 = {
 			isa = PBXGroup;
 			children = (
@@ -212,17 +232,17 @@
 		3CC02E2F1FBDCA0900B2BAF9 /* TutuTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				3C85119120553CA30080A55A /* Constants */,
 				3CFE0B8B1FCDB6C3009E52FB /* Extensions */,
 				3C6E06201FBF49D400978C9C /* VIew */,
 				3C6E06191FBF3F3D00978C9C /* Controller */,
 				3CC02E6E1FBDF7BF00B2BAF9 /* Helper */,
 				3CC02E611FBDD16000B2BAF9 /* Model */,
 				3CC02E301FBDCA0900B2BAF9 /* AppDelegate.swift */,
-				3CC02E341FBDCA0900B2BAF9 /* Main.storyboard */,
 				3CC02E3A1FBDCA0900B2BAF9 /* Assets.xcassets */,
 				3CC02E3C1FBDCA0900B2BAF9 /* LaunchScreen.storyboard */,
 				3CC02E3F1FBDCA0900B2BAF9 /* Info.plist */,
-				3CC02E371FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld */,
+				3CF1111D2057DD75003A6CCA /* TutuTestProject.xcdatamodeld */,
 			);
 			path = TutuTestProject;
 			sourceTree = "<group>";
@@ -248,10 +268,15 @@
 		3CC02E611FBDD16000B2BAF9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3CF111392057F996003A6CCA /* Station+CoreDataClass.swift */,
+				3CF111382057F996003A6CCA /* Station+CoreDataProperties.swift */,
+				3CF111352057E83C003A6CCA /* PointCoordinates+CoreDataClass.swift */,
+				3CF111342057E83C003A6CCA /* PointCoordinates+CoreDataProperties.swift */,
+				3CF1112B2057DF28003A6CCA /* City+CoreDataClass.swift */,
+				3CF111292057DF28003A6CCA /* City+CoreDataProperties.swift */,
+				3CF1112A2057DF28003A6CCA /* DataSource+CoreDataClass.swift */,
+				3CF111282057DF28003A6CCA /* DataSource+CoreDataProperties.swift */,
 				3CC02E661FBDD6F700B2BAF9 /* allStations.json */,
-				3CC02E681FBDF6E300B2BAF9 /* Station.swift */,
-				3CC02E6A1FBDF6ED00B2BAF9 /* City.swift */,
-				3CC02E6C1FBDF73300B2BAF9 /* PointCoordinates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				3CC02E6F1FBDF7CE00B2BAF9 /* DataManager.swift */,
+				3C85119420553EE90080A55A /* CoreDataManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -411,7 +437,6 @@
 				3CC02E3E1FBDCA0900B2BAF9 /* LaunchScreen.storyboard in Resources */,
 				3CC02E3B1FBDCA0900B2BAF9 /* Assets.xcassets in Resources */,
 				3CC02E671FBDD6F700B2BAF9 /* allStations.json in Resources */,
-				3CC02E361FBDCA0900B2BAF9 /* Main.storyboard in Resources */,
 				3CB380AF1FD13336004C6E2C /* StationDetailsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,23 +614,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF111372057E83D003A6CCA /* PointCoordinates+CoreDataClass.swift in Sources */,
 				3CB380AE1FD13336004C6E2C /* StationDetailsCell.swift in Sources */,
-				3CC02E6D1FBDF73300B2BAF9 /* PointCoordinates.swift in Sources */,
 				3C6E061F1FBF48E900978C9C /* StationsViewController.swift in Sources */,
+				3CF1112C2057DF28003A6CCA /* DataSource+CoreDataProperties.swift in Sources */,
+				3C85119520553EE90080A55A /* CoreDataManager.swift in Sources */,
+				3CF111362057E83D003A6CCA /* PointCoordinates+CoreDataProperties.swift in Sources */,
+				3CF1112F2057DF28003A6CCA /* City+CoreDataClass.swift in Sources */,
 				3CC02E701FBDF7CE00B2BAF9 /* DataManager.swift in Sources */,
 				3C37F3041FCC699D00D650EA /* StationsTableFooter.swift in Sources */,
-				3CC02E391FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld in Sources */,
 				3CFE0B921FCE63BB009E52FB /* UIFontExtensions.swift in Sources */,
 				3CFE0B8D1FCDB6DA009E52FB /* UIViewControllerExtensions.swift in Sources */,
 				3CDA773A1FC0977C008E9743 /* StationDetailsViewController.swift in Sources */,
 				3C6E061D1FBF3F7600978C9C /* AboutViewController.swift in Sources */,
-				3CC02E691FBDF6E300B2BAF9 /* Station.swift in Sources */,
-				3CC02E6B1FBDF6ED00B2BAF9 /* City.swift in Sources */,
+				3CF1113A2057F997003A6CCA /* Station+CoreDataProperties.swift in Sources */,
+				3CF1112D2057DF28003A6CCA /* City+CoreDataProperties.swift in Sources */,
 				3CC02E311FBDCA0900B2BAF9 /* AppDelegate.swift in Sources */,
 				3C6E061B1FBF3F5D00978C9C /* ScheduleViewController.swift in Sources */,
 				3C37F3011FCC627800D650EA /* ResultsViewController.swift in Sources */,
 				3CB380AA1FD12AAD004C6E2C /* StationCell.swift in Sources */,
+				3CF1111F2057DD75003A6CCA /* TutuTestProject.xcdatamodeld in Sources */,
+				3CF1113B2057F997003A6CCA /* Station+CoreDataClass.swift in Sources */,
 				3CFE0B901FCDCD13009E52FB /* CustomButton.swift in Sources */,
+				3CF1112E2057DF28003A6CCA /* DataSource+CoreDataClass.swift in Sources */,
+				3C85119320553CB50080A55A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,14 +673,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3CC02E341FBDCA0900B2BAF9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CC02E351FBDCA0900B2BAF9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3CC02E3C1FBDCA0900B2BAF9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -911,12 +935,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3CC02E371FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodeld */ = {
+		3CF1111D2057DD75003A6CCA /* TutuTestProject.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3CC02E381FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodel */,
+				3CF1111E2057DD75003A6CCA /* TutuTestProject.xcdatamodel */,
 			);
-			currentVersion = 3CC02E381FBDCA0900B2BAF9 /* TutuTestProject.xcdatamodel */;
+			currentVersion = 3CF1111E2057DD75003A6CCA /* TutuTestProject.xcdatamodel */;
 			path = TutuTestProject.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

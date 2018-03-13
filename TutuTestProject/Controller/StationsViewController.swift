@@ -169,6 +169,8 @@ extension StationsViewController: UITableViewDataSource {
         }
         self.tableFooter.dismiss()
         return 0
+        
+        return 1
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -188,7 +190,7 @@ extension StationsViewController: UITableViewDataSource {
         } else {
             station = self.cities[indexPath.section].stations?[indexPath.row]
         }
-        
+
         cell.configure(station)
         cell.showDetailsHandler = { station in
             self.showStationDetails(station)

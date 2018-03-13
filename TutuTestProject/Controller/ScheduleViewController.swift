@@ -253,7 +253,7 @@ class ScheduleViewController: UITableViewController {
 }
 
 extension ScheduleViewController: StationSelectionDelegate {
-    
+
     func didSelectStation(station: Station, mode: StationsMode) {
         if mode == .from {
             self.fromStation = station
@@ -264,3 +264,4 @@ extension ScheduleViewController: StationSelectionDelegate {
         }
     }
 }
+

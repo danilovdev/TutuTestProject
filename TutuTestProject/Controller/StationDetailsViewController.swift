@@ -81,7 +81,7 @@ class StationDetailsViewController: UITableViewController {
         case 4:
             cell.configure(property: ("Район", self.analyzeValue(self.station.districtTitle)))
         case 5:
-            cell.configure(property: ("Координаты", self.station.point?.description() ?? "Неизвестно"))
+            cell.configure(property: ("Координаты", self.station.point?.description ?? "Неизвестно"))
         default:
             break
         }

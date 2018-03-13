@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="City" representedClassName="City" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cityTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="districtTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="point" optional="YES" attributeType="Transformable" customClassName="PointCoordinates" syncable="YES"/>
+        <attribute name="regionTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dataSourceFrom" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DataSource" inverseName="citiesFrom" inverseEntity="DataSource" syncable="YES"/>
+        <relationship name="dataSourceTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DataSource" inverseName="citiesTo" inverseEntity="DataSource" syncable="YES"/>
+        <relationship name="stations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Station" inverseName="city" inverseEntity="Station" syncable="YES"/>
+    </entity>
+    <entity name="DataSource" representedClassName="DataSource" syncable="YES">
+        <relationship name="citiesFrom" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City" inverseName="dataSourceFrom" inverseEntity="City" syncable="YES"/>
+        <relationship name="citiesTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City" inverseName="dataSourceTo" inverseEntity="City" syncable="YES"/>
+    </entity>
+    <entity name="PointCoordinates" representedClassName="PointCoordinates" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Station" representedClassName="Station" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cityTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="districtTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="point" optional="YES" attributeType="Transformable" customClassName="PointCoordinates" syncable="YES"/>
+        <attribute name="regionTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stationId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="stationTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="stations" inverseEntity="City" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="City" positionX="214" positionY="153" width="128" height="180"/>
+        <element name="DataSource" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="PointCoordinates" positionX="99" positionY="153" width="128" height="75"/>
+        <element name="Station" positionX="108" positionY="171" width="128" height="180"/>
+    </elements>
 </model>
