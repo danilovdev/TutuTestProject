@@ -1,5 +1,10 @@
 # TutuTestProject
 
+## Contents:
+1. Description in Russian
+
+2. Description in English
+
 ## Description in Russian
 
 ### Что необходимо сделать
@@ -93,6 +98,8 @@ Display detailed information about a particular station (naming and its full add
 
 #### 4. About Screen ("О приложении")
 In this section you need to post information about: Author, Application Version
+
+### JSON file description
 
 Input data in JSON
 ```javascript
